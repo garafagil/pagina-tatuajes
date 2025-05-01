@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tristero - Réplica Página de Tatuajes</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Tema oscuro personalizado */
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Playfair Display', serif;
+    }
+    /* Estilo de la barra de desplazamiento */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #1f1f1f;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: #555;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="antialiased">
+
+  <!-- Navegación -->
+  <nav class="fixed top-0 left-0 w-full bg-black bg-opacity-80 backdrop-blur-md z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#" class="text-2xl font-playfair text-white font-bold">Tristero</a>
+      <ul class="hidden md:flex space-x-8 text-gray-300">
+        <li><a href="#about" class="hover:text-white transition">Sobre Nosotros</a></li>
+        <li><a href="#services" class="hover:text-white transition">Servicios</a></li>
+        <li><a href="#gallery" class="hover:text-white transition">Galería</a></li>
+        <li><a href="#contact" class="hover:text-white transition">Contacto</a></li>
+      </ul>
+      <div class="md:hidden text-gray-300 cursor-pointer" id="menu-btn">
+        <i class="fas fa-bars fa-lg"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Menú móvil -->
+  <div id="mobile-menu" class="hidden fixed top-16 left-0 w-full bg-black bg-opacity-90 backdrop-blur-md z-40">
+    <ul class="flex flex-col space-y-4 p-6 text-gray-300">
+      <li><a href="#about" class="block hover:text-white transition">Sobre Nosotros</a></li>
+      <li><a href="#services" class="block hover:text-white transition">Servicios</a></li>
+      <li><a href="#gallery" class="block hover:text-white transition">Galería</a></li>
+      <li><a href="#contact" class="block hover:text-white transition">Contacto</a></li>
+    </ul>
+  </div>
+
+  <!-- Sección Hero -->
+  <section class="relative h-screen bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80');">
+    <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center text-center px-4">
+      <h1 class="text-5xl md:text-7xl font-playfair font-bold text-white mb-4 drop-shadow-lg">Arte en Tinta</h1>
+      <p class="text-lg md:text-2xl text-gray-300 max-w-2xl drop-shadow-md">Diseños únicos y personalizados para expresar tu estilo</p>
+      <a href="#contact" class="mt-8 inline-block bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-8 rounded transition">Reserva tu cita</a>
+    </div>
+  </section>
+
+  <!-- Sección Sobre Nosotros -->
+  <section id="about" class="max-w-7xl mx-auto px-6 py-20">
+    <h2 class="text-4xl font-playfair font-bold mb-8 text-white text-center">Sobre Nosotros</h2>
+    <p class="text-gray-300 max-w-4xl mx-auto text-center leading-relaxed">
+      En Tristero, somos apasionados por el arte del tatuaje. Nuestro equipo de artistas expertos crea diseños personalizados que cuentan tu historia y reflejan tu personalidad.
+    </p>
+  </section>
+
+  <!-- Sección Servicios -->
+  <section id="services" class="bg-gray-900 py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-playfair font-bold mb-12 text-white text-center">Servicios</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center text-gray-300">
+        <div>
+          <i class="fas fa-pen-nib fa-3x mb-4 text-red-600"></i>
+          <h3 class="text-2xl font-semibold mb-2">Tatuajes Personalizados</h3>
+          <p>Diseños únicos hechos a medida para ti.</p>
+        </div>
+        <div>
+          <i class="fas fa-paint-brush fa-3x mb-4 text-red-600"></i>
+          <h3 class="text-2xl font-semibold mb-2">Cover Ups</h3>
+          <p>Transformamos tatuajes antiguos en obras de arte nuevas.</p>
+        </div>
+        <div>
+          <i class="fas fa-hand-holding-medical fa-3x mb-4 text-red-600"></i>
+          <h3 class="text-2xl font-semibold mb-2">Cuidado y Mantenimiento</h3>
+          <p>Asesoría para el cuidado de tu tatuaje.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Galería -->
+  <section id="gallery" class="max-w-7xl mx-auto px-6 py-20">
+    <h2 class="text-4xl font-playfair font-bold mb-12 text-white text-center">Galería</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=600&q=80" alt="Tatuaje 1" class="rounded shadow-lg" />
+      <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=600&q=80" alt="Tatuaje 2" class="rounded shadow-lg" />
+      <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=600&q=80" alt="Tatuaje 3" class="rounded shadow-lg" />
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80" alt="Tatuaje 4" class="rounded shadow-lg" />
+      <img src="https://images.unsplash.com/photo-1511765224389-37f0e77cf0eb?auto=format&fit=crop&w=600&q=80" alt="Tatuaje 5" class="rounded shadow-lg" />
+      <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=600&q=80" alt="Tatuaje 6" class="rounded shadow-lg" />
+    </div>
+  </section>
+
+  <!-- Sección Contacto -->
+  <section id="contact" class="bg-gray-900 py-20">
+    <div class="max-w-7xl mx-auto px-6 text-center text-gray-300">
+      <h2 class="text-4xl font-playfair font-bold mb-8">Contacto</h2>
+      <p class="mb-6">¿Quieres un tatuaje único? Contáctanos para reservar tu cita o para más información.</p>
+      <a href="mailto:contacto@tristero.com" class="inline-block bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-8 rounded transition">Enviar correo</a>
+    </div>
+  </section>
+
+  <!-- Pie de página -->
+  <footer class="bg-black bg-opacity-80 py-6 text-center text-gray-500 text-sm">
+    &copy; 2024 Tristero. Todos los derechos reservados.
+  </footer>
+
+  <script>
+    // Alternar menú móvil
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html><!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+</body>
+</html>

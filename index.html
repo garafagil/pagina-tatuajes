@@ -3,132 +3,225 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Garufa Tattoo - Preguntas Frecuentes</title>
+  <title>Garufa Tattoo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      font-family: 'Bebas Neue', sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: transparent;
+      padding: 1rem 0;
+      position: absolute;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
       margin: 0;
       padding: 0;
-      background-color: #0f0f0f;
-      color: #f5f5f5;
     }
 
-    header {
-      background-color: #111111;
-      padding: 2rem;
-      text-align: center;
+    nav li {
+      position: relative;
     }
 
-    header img {
-      max-width: 200px;
-      margin-bottom: 1rem;
+    nav a {
+      color: white;
+      text-decoration: none;
+      letter-spacing: 1px;
+      font-size: 1.1rem;
+      transition: color 0.3s;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-      letter-spacing: 2px;
-    }
-
-    main {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    section.faq {
-      margin-bottom: 4rem;
-    }
-
-    section.faq h2 {
-      font-size: 1.8rem;
-      margin-bottom: 1.5rem;
-      border-bottom: 2px solid #666;
-      padding-bottom: 0.5rem;
-    }
-
-    .faq-item {
-      margin-bottom: 1.8rem;
-      border-left: 4px solid #e63946;
-      padding-left: 1rem;
-    }
-
-    .faq-item h3 {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
+    nav a:hover,
+    nav a.active {
       color: #e63946;
     }
 
-    .faq-item p {
-      margin: 0;
-      color: #ccc;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
+    nav li ul {
+      display: none;
+      position: absolute;
+      top: 2rem;
+      left: 0;
       background-color: #111;
-      font-size: 0.9rem;
-      color: #888;
+      padding: 1rem;
+      border-radius: 4px;
     }
 
-    .faq-image {
-      max-width: 100%;
-      border-radius: 10px;
-      margin: 2rem auto;
+    nav li:hover ul {
       display: block;
+    }
+
+    nav li ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    section.hero {
+      position: relative;
+      height: 100vh;
+      background-image: url('estudioprivado.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding-left: 3rem;
+    }
+
+    section.hero h3 {
+      font-size: 2.4rem;
+      color: #e63946;
+      margin-bottom: 0.5rem;
+    }
+
+    section.hero h1 {
+      font-size: 4.5rem;
+      margin: 0;
+    }
+
+    section.hero h1.outline {
+      color: transparent;
+      -webkit-text-stroke: 1px white;
+    }
+
+    .hero a.button {
+      margin-top: 2rem;
+      padding: 0.8rem 2rem;
+      background-color: #e63946;
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      border-radius: 4px;
+    }
+
+    section.bloque-estudio {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 6rem 3rem;
+      background-color: #0a0a0a;
+      flex-wrap: wrap;
+    }
+
+    .bloque-estudio .texto {
+      max-width: 50%;
+      min-width: 300px;
+    }
+
+    .bloque-estudio h2 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .bloque-estudio span.outline {
+      color: transparent;
+      -webkit-text-stroke: 1px #e63946;
+    }
+
+    .bloque-estudio p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    .bloque-estudio ul {
+      margin-top: 2rem;
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .bloque-estudio li {
+      color: white;
+      margin-bottom: 0.8rem;
+    }
+
+    .bloque-estudio li span {
+      color: #e63946;
+      margin-right: 0.5rem;
+    }
+
+    .bloque-estudio img {
+      max-width: 450px;
+      border-radius: 12px;
+    }
+
+    @media screen and (max-width: 768px) {
+      section.hero h1 {
+        font-size: 3rem;
+      }
+      section.hero h3 {
+        font-size: 1.5rem;
+      }
+      .bloque-estudio {
+        flex-direction: column;
+        text-align: center;
+      }
+      .bloque-estudio .texto {
+        max-width: 100%;
+      }
+      .bloque-estudio img {
+        margin-top: 2rem;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="https://i.imgur.com/5CQCUxR.png" alt="Garufa Tattoo Logo" />
-    <h1>Preguntas Frecuentes - Garufa Tattoo</h1>
-  </header>
 
-  <main>
-    <section class="faq">
-      <h2>¿Cómo puedo pedir una cita?</h2>
-      <div class="faq-item">
-        <h3>¿Cómo agendo una cita?</h3>
-        <p>Podés solicitar cita directamente desde nuestro <strong>bot de Telegram</strong> o escribirnos a través de Instagram. Una vez confirmado el diseño y el precio, agendamos tu sesión con una seña.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Cómo funciona la seña?</h3>
-        <p>La seña se descuenta del total del tatuaje. Sirve para reservar el tiempo de tu artista y es reembolsable sólo si se avisa con al menos 48h de anticipación.</p>
-      </div>
-      <img class="faq-image" src="https://i.imgur.com/9WDh6sa.jpeg" alt="Cabina Garufa Tattoo" />
-    </section>
+  <nav>
+    <ul>
+      <li><a href="#" class="active">INICIO</a></li>
+      <li><a href="#">SOBRE MÍ</a></li>
+      <li><a href="#">SERVICIOS</a></li>
+      <li><a href="#">PORTAFOLIO</a></li>
+      <li>
+        <a href="#">PÁGINAS</a>
+        <ul>
+          <li><a href="#">Preguntas Frecuentes</a></li>
+          <li><a href="#">Política de privacidad</a></li>
+          <li><a href="#">Aviso legal</a></li>
+        </ul>
+      </li>
+      <li><a href="#">BLOG</a></li>
+      <li><a href="#">CONTACTO</a></li>
+    </ul>
+  </nav>
 
-    <section class="faq">
-      <h2>¿Qué cuidados debo tener antes y después del tatuaje?</h2>
-      <div class="faq-item">
-        <h3>¿Qué debo hacer antes del tatuaje?</h3>
-        <p>Recomendamos descansar bien, no venir en ayunas ni bajo efectos de alcohol u otras sustancias. Vení con ropa cómoda y limpia.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Y después del tatuaje?</h3>
-        <p>Te explicaremos todo lo necesario, pero básicamente: limpieza diaria, crema cicatrizante y evitar el sol o piscina por al menos 2 semanas.</p>
-      </div>
-      <img class="faq-image" src="https://i.imgur.com/LEhNiOg.jpeg" alt="Material esterilizado Garufa" />
-    </section>
+  <section class="hero">
+    <h3>BIENVENIDO A GARUFA TATTOO ESTUDIO</h3>
+    <h1>TU IDEA, MI ARTE.</h1>
+    <h1 class="outline">TU TATUAJE</h1>
+    <a href="#" class="button">Reserva tu cita</a>
+  </section>
 
-    <section class="faq">
-      <h2>Sobre el estudio</h2>
-      <div class="faq-item">
-        <h3>¿Dónde están ubicados?</h3>
-        <p>Estamos en Las Palmas de Gran Canaria. Atendemos con cita previa en un entorno privado, seguro y autorizado por Sanidad.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Qué estilo de tatuaje hacen?</h3>
-        <p>Nos especializamos en realismo y microrealismo en blanco y negro, siempre priorizando el detalle y la calidad del trabajo final.</p>
-      </div>
-      <img class="faq-image" src="https://i.imgur.com/GybdkAA.jpeg" alt="Estudio privado Garufa" />
-    </section>
-  </main>
+  <section class="bloque-estudio">
+    <div class="texto">
+      <h2>ESTUDIO PRIVADO <span class="outline">TATTOO</span></h2>
+      <p>
+        Trabajo de forma personalizada en cada proyecto, en un entorno privado, tranquilo y profesional.<br><br>
+        La prioridad es tu comodidad, confianza y que el resultado sea único para ti.<br><br>
+        Cada cita la preparo con tiempo, cuidando cada detalle del diseño. Me gusta que vivas la experiencia sin apuros ni interrupciones.
+      </p>
+      <ul>
+        <li><span>✔</span> Diseños realistas completamente personalizados</li>
+        <li><span>✔</span> Ambiente higiénico y relajado</li>
+        <li><span>✔</span> Trato directo conmigo, tu tatuador</li>
+      </ul>
+    </div>
+    <div>
+      <img src="estudioprivado.jpg" alt="Foto estudio privado" />
+    </div>
+  </section>
 
-  <footer>
-    &copy; 2025 Garufa Tattoo · Las Palmas de GC · Estudio privado autorizado
-  </footer>
 </body>
 </html>

@@ -13,104 +13,90 @@
       color: #fff;
     }
     header {
+      position: absolute;
+      top: 0;
+      left: 0;
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      padding: 20px 60px 0 60px;
+      z-index: 10;
+      width: 100%;
+      padding: 40px 60px 20px 60px;
     }
     .logo {
       text-align: left;
+      margin-left: 12rem;
     }
     .logo h1 {
       margin: 0;
-      font-size: 2.5rem;
+      font-size: 3rem;
     }
     .logo span {
       color: red;
-      font-size: 0.9rem;
+      font-size: 1rem;
       letter-spacing: 4px;
+    }
+    nav {
+      margin-right: 12rem;
+      margin-top: 2rem;
     }
     nav ul {
       list-style: none;
       display: flex;
-      gap: 1.5rem;
+      gap: 3rem;
       margin: 0;
       padding: 0;
     }
     nav a {
       color: white;
       text-decoration: none;
-      font-size: 1rem;
+      font-size: 1.4rem;
     }
     nav a:hover,
     nav a:focus {
       color: red;
     }
     .hero {
-      padding: 80px 60px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      height: 100vh;
+      background-image: url('fondo.jpg');
+      background-size: cover;
+      background-position: center;
+      padding-left: 240px;
+    }
+    .hero-content {
+      max-width: none;
     }
     .hero h4 {
       color: red;
-      font-size: 0.9rem;
+      font-size: 0.9vw;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+    .hero h2,
+    .hero h3 {
+      font-size: 4.5vw;
       margin: 0;
+      font-weight: bold;
+      line-height: 1.1;
     }
     .hero h2 {
-      font-size: 4rem;
-      margin: 0;
+      color: white;
     }
     .hero h3 {
-      font-size: 3rem;
-      margin: 10px 0;
       color: transparent;
-      -webkit-text-stroke: 1px red;
+      -webkit-text-stroke: 1px white;
     }
     .hero button {
-      margin-top: 20px;
-      padding: 10px 20px;
-      font-size: 1rem;
-      background-color: red;
+      margin-top: 2vw;
+      padding: 1vw 2vw;
+      font-size: 1vw;
+      background-color: #d60a0a;
       border: none;
       color: white;
       cursor: pointer;
-    }
-    .section {
-      display: flex;
-      padding: 60px;
-      justify-content: space-between;
-    }
-    .section .text {
-      max-width: 50%;
-    }
-    .section .text h2 {
-      font-size: 2.5rem;
-      margin: 0 0 10px;
-    }
-    .section .text span {
-      color: red;
-    }
-    .section .text ul {
-      padding-left: 20px;
-    }
-    .section .text ul li {
-      margin-bottom: 10px;
-      list-style: square;
-      color: red;
-    }
-    .section .text ul li span {
-      color: white;
-    }
-    .section .steps {
-      width: 40%;
-    }
-    .section .steps h3 {
-      color: white;
-    }
-    .section .steps div {
-      margin-bottom: 30px;
-    }
-    .section .steps div h3 span {
-      color: red;
-      margin-right: 5px;
     }
   </style>
 </head>
@@ -134,56 +120,12 @@
   </header>
 
   <section class="hero">
-    <h4>BIENVENIDO A GARUFA TATTOO ESTUDIO</h4>
-    <h2>TU IDEA, MI ARTE</h2>
-    <h3>TU TATUAJE</h3>
-    <button>Reserva tu tatuaje</button>
-  </section>
-
-  <section class="section">
-    <div class="text">
-      <h2>ESTUDIO PRIVADO <span>TATTOO</span></h2>
-      <p>Trabajo de forma personalizada en cada proyecto, en un entorno privado, tranquilo y profesional. La prioridad es tu comodidad, confianza y que el resultado sea único para ti.</p>
-      <p>Me gusta que vivas la experiencia sin apuros ni interrupciones. Es un espacio donde conectamos tu idea con mi técnica para crear algo realmente tuyo.</p>
-      <ul>
-        <li><span>Atención exclusiva con cita previa</span></li>
-        <li><span>Diseños realistas completamente personalizados</span></li>
-        <li><span>Ambiente higienico y relajado</span></li>
-        <li><span>Trato directo conmigo, tu tatuador</span></li>
-      </ul>
-    </div>
-    <div class="image">
-      <img src="estudioprivado.jpg" alt="Imagen del estudio" width="400">
+    <div class="hero-content">
+      <h4>BIENVENIDO A GARUFA TATTOO ESTUDIO</h4>
+      <h2>TU IDEA, MI ARTE</h2>
+      <h3>TU TATUAJE</h3>
+      <button>Reserva tu tatuaje</button>
     </div>
   </section>
-
-  <section class="section">
-    <div class="text">
-      <h4>MI PROCESO</h4>
-      <h2>CÓMO <span>TRABAJO</span></h2>
-      <p>Me gusta que cada tatuaje tenga una historia detrás. En esta sección te explico cómo suelo trabajar para que te sientas cómodo desde el primer momento.</p>
-      <ul>
-        <li><span>Trabajo sólo con cita previa y atención personalizada</span></li>
-        <li><span>Cuido la higiene y la seguridad en cada sesión</span></li>
-      </ul>
-    </div>
-    <div class="steps">
-      <div>
-        <h3><span>1.</span> PRIMER CONTACTO</h3>
-        <p>Me escribes o concertamos una cita para hablar de tu idea. Podemos hacerlo en persona o por mensaje.</p>
-      </div>
-      <div>
-        <h3><span>2.</span> RESERVA TU CITA</h3>
-        <p>Una vez definido el diseño, agendamos tu sesión y te explico todo lo que necesitas saber antes de tatuarte.</p>
-      </div>
-      <div>
-        <h3><span>3.</span> TU TATUAJE</h3>
-        <p>Ese día te recibiré con todo preparado, trabajaremos en un ambiente relajado y seguro para que disfrutes el proceso.</p>
-      </div>
-    </div>
-  </section>
-</body>
-</html>
-
 </body>
 </html>
